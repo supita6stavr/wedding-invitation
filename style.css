@@ -1,4 +1,4 @@
-/* Общие сбросы и база */
+/* Общие сбросы */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Ysabeau Office', sans-serif;
-    background-color: #fdfbf7;  /* нежно-белый */
-    color: #4a4a4a;             /* темно-серый */
+    background-color: #fdfbf7;
+    color: #4a4a4a;
     text-align: center;
     line-height: 1.5;
     overflow-x: hidden;
@@ -21,7 +21,6 @@ section {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    scroll-margin-top: 0;
 }
 
 .font1 {
@@ -39,19 +38,23 @@ section {
 
 /* Календарь */
 .calendar {
-    max-width: 320px;
+    display: inline-block;
+    width: 100%;
+    max-width: 450px;
     margin: 20px auto;
     background: rgba(255,255,255,0.6);
     backdrop-filter: blur(4px);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    font-family: 'Ysabeau Office', sans-serif;
 }
 
 .month {
-    font-family: 'Caveat', cursive;
-    font-size: 1.8rem;
+    font-family: 'Ysabeau Office', sans-serif;
+    font-size: 1.6rem;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .weekdays, .days {
@@ -79,8 +82,8 @@ section {
     border-radius: 4px;  /* квадратная рамка */
 }
 
-/* Кнопка "Как добраться" */
-.map-button {
+/* Кнопки с обводкой */
+.outline-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 30px;
@@ -92,9 +95,10 @@ section {
     text-decoration: none;
     border-radius: 40px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
-.map-button:hover {
+.outline-btn:hover {
     background: #b08b6c;
     color: white;
 }
@@ -183,24 +187,7 @@ legend {
     cursor: pointer;
 }
 
-.submit-btn {
-    background: #b08b6c;
-    border: none;
-    color: white;
-    padding: 14px;
-    border-radius: 40px;
-    font-size: 1.2rem;
-    font-family: 'Caveat', cursive;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background: #8e6648;
-}
-
-/* Placeholder-блоки для будущих фото */
+/* Placeholder-блоки */
 .image-placeholder {
     margin: 20px 0;
     display: flex;
