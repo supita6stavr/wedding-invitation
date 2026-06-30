@@ -71,7 +71,7 @@ section {
 .half-image .image-placeholder img {
     display: block;
     margin: 0 auto;
-    width: 280px;          /* ← меняйте только это число (280px, 350px, 400px...) */
+    width: 350px;          /* ← меняйте только это число (280px, 350px, 400px...) */
     max-width: 100%;       /* не трогайте – это для мобильных */
     height: auto;
     border-radius: 20px;
@@ -81,7 +81,7 @@ section {
 #sheet4 .image-placeholder img {
     display: block;
     margin: 20px auto;
-    width: 350px;          /* ← меняйте только это число */
+    width: 500px;          /* ← меняйте только это число */
     max-width: 100%;       /* не трогайте */
     height: auto;
     border-radius: 20px;
