@@ -36,13 +36,14 @@ section {
     margin: 0 auto 1em;
 }
 
-/* Лист 2: текст слева, фото справа */
+/* ----- ЛИСТ 2: Текст слева, фото справа ----- */
 #sheet2 {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center;
-    align-items: center;
 }
 
 #sheet2 .text-content {
@@ -50,12 +51,18 @@ section {
     text-align: left;
 }
 
+/* убираем центрирование у текста в этой секции */
+#sheet2 .font2 {
+    margin: 0 0 1em 0;
+    max-width: 100%;
+}
+
 #sheet2 .image-placeholder {
     flex: 1 1 300px;
     margin: 0;
 }
 
-/* Календарь */
+/* ----- Календарь ----- */
 .calendar {
     display: inline-block;
     width: 100%;
@@ -101,7 +108,7 @@ section {
     border-radius: 4px;
 }
 
-/* Кнопки с обводкой */
+/* ----- Кнопки с обводкой (используются и для ссылок, и для submit) ----- */
 .outline-btn {
     display: inline-block;
     margin-top: 20px;
@@ -122,7 +129,7 @@ section {
     color: white;
 }
 
-/* Тайминг (лист 5) */
+/* ----- Тайминг (лист 5) ----- */
 .timeline {
     display: flex;
     flex-wrap: wrap;
@@ -145,12 +152,10 @@ section {
     border: 3px solid #e8d5c4;
 }
 
+/* время теперь тоже в классе font2, просто жирнее для акцента */
 .event-time {
-    font-family: 'Caveat', cursive;
-    font-size: 2.2rem;
-    color: #b08b6c;
-    margin-bottom: 5px;
-    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 5px !important;
 }
 
 .event .font2 {
@@ -158,7 +163,7 @@ section {
     max-width: 100%;
 }
 
-/* Счётчик */
+/* ----- Счётчик ----- */
 #timer {
     display: flex;
     flex-wrap: wrap;
@@ -181,7 +186,7 @@ section {
     line-height: 1;
 }
 
-/* Форма анкеты */
+/* ----- Форма анкеты (лист 9) ----- */
 .survey-form {
     width: 100%;
     max-width: 400px;
@@ -192,15 +197,23 @@ section {
     margin-top: 10px;
 }
 
+/* поле ввода – точно как рамка кнопки */
 .survey-form input[type="text"] {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #b08b6c;      /* такой же цвет и толщина, как у кнопки */
-    border-radius: 12px;
+    border: 2px solid #b08b6c;
+    border-radius: 40px;           /* теперь как у кнопки */
     font-family: inherit;
     font-size: 1rem;
     background: #fffdf9;
     margin-top: 8px;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s;
+}
+
+.survey-form input[type="text"]:focus {
+    border-color: #b08b6c;
 }
 
 fieldset {
@@ -226,17 +239,25 @@ legend {
     justify-content: center;
 }
 
-/* Адаптивность */
+/* ----- Адаптивность ----- */
 @media (max-width: 600px) {
     section {
         padding: 60px 15px;
     }
+
+    /* лист 2: на телефоне колонка, текст и фото центрируются */
     #sheet2 {
         flex-direction: column;
+        justify-content: center;
     }
     #sheet2 .text-content {
         text-align: center;
     }
+    #sheet2 .font2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .timeline {
         flex-direction: column;
         align-items: center;
