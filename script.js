@@ -5,8 +5,7 @@ AOS.init({
     easing: 'ease-out-cubic'
 });
 
-// Счётчик обратного отсчёта до 12 сентября 2026, 15:00:00 по Москве (UTC+3)
-// Используем timestamp с учётом смещения +3 часа
+// Счётчик до 12 сентября 2026, 15:00:00 (UTC+3)
 const targetDate = new Date(Date.UTC(2026, 8, 12, 12, 0, 0)); // 12:00 UTC = 15:00 МСК
 
 function updateTimer() {
