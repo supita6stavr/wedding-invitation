@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу Анны и Никиты</title>
+    <!-- Шрифты Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Ysabeau+Office:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- AOS анимации -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Лист 1: Имена и дата -->
+    <section id="sheet1" data-aos="fade-up">
+        <h1 class="font1">Анна и Никита</h1>
+        <p class="font2 date">12 сентября 2026</p>
+    </section>
+
+    <!-- Лист 2: Приветствие + фото -->
+    <section id="sheet2" data-aos="fade-up">
+        <h2 class="font1">Этот момент настал!</h2>
+        <p class="font2">Совсем скоро состоится день нашей свадьбы, и мы будем счастливы, если Вы разделите с нами этот чудесный день!</p>
+        <div class="image-placeholder">
+            <!-- ЗАМЕНИТЕ src на своё фото -->
+            <img src="https://via.placeholder.com/300x200/fdfbf7/aaaaaa?text=Ваше+фото" alt="Фото пары" style="max-width:100%; border-radius:20px;">
+        </div>
+    </section>
+
+    <!-- Лист 3: Дата с календарём -->
+    <section id="sheet3" data-aos="fade-up">
+        <h2 class="font1">Свадьба состоится</h2>
+        <div class="calendar">
+            <div class="month">Сентябрь 2026</div>
+            <div class="weekdays">
+                <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+            <div class="days">
+                <!-- Заполнено статично для сентября 2026, 12-е выделено -->
+                <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="highlight">12</span>
+                <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+                <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                <span>27</span><span>28</span><span>29</span><span>30</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лист 4: Локация + кнопка -->
+    <section id="sheet4" data-aos="fade-up">
+        <h2 class="font1">Локация</h2>
+        <p class="font2">Ресторанный комплекс "Победа"<br>проспект имени В.И. Ленина 78Б</p>
+        <p class="font2">Сбор гостей в 15:00</p>
+        <div class="image-placeholder">
+            <!-- ЗАМЕНИТЕ src на фото ресторана -->
+            <img src="https://via.placeholder.com/300x200/fdfbf7/aaaaaa?text=Фото+ресторана" alt="Ресторан Победа" style="max-width:100%; border-radius:20px;">
+        </div>
+        <a href="https://yandex.ru/profile/-/CTaCzVoY" target="_blank" class="map-button">Как добраться</a>
+    </section>
+
+    <!-- Лист 5: Тайминг с тремя изображениями -->
+    <section id="sheet5" data-aos="fade-up">
+        <h2 class="font1">Тайминг</h2>
+        <div class="timeline">
+            <div class="event">
+                <!-- ЗАМЕНИТЕ src на иконку/фото ЗАГС -->
+                <img src="https://via.placeholder.com/80/fdfbf7/aaaaaa?text=ЗАГС" alt="ЗАГС">
+                <p class="font2">11:00 ЗАГС<br>(ул. Рабоче-Крестьянская, д.7)</p>
+            </div>
+            <div class="event">
+                <!-- ЗАМЕНИТЕ src на иконку/фото банкет -->
+                <img src="https://via.placeholder.com/80/fdfbf7/aaaaaa?text=Банкет" alt="Банкет">
+                <p class="font2">14:00 Банкет<br>(проспект Ленина, 78Б)</p>
+            </div>
+            <div class="event">
+                <!-- ЗАМЕНИТЕ src на иконку/фото завершение -->
+                <img src="https://via.placeholder.com/80/fdfbf7/aaaaaa?text=Финал" alt="Завершение">
+                <p class="font2">21:00 Завершение вечера</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лист 6: Дресс-код + счётчик -->
+    <section id="sheet6" data-aos="fade-up">
+        <div class="dress-code">
+            <h2 class="font1">Дресс-код</h2>
+            <p class="font2">Для нас свадьба ассоциируется с нежностью и романтичностью. Поэтому просим отказаться в этот день от футболок, ярких рубашек и джинсов.</p>
+        </div>
+        <div class="countdown">
+            <h2 class="font1">До нашей свадьбы осталось</h2>
+            <div id="timer">
+                <div><span id="days">00</span><span>дней</span></div>
+                <div><span id="hours">00</span><span>часов</span></div>
+                <div><span id="minutes">00</span><span>минут</span></div>
+                <div><span id="seconds">00</span><span>секунд</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лист 7: Контакты -->
+    <section id="sheet7" data-aos="fade-up">
+        <h2 class="font1">Связаться с нами</h2>
+        <p class="font2">По всем вопросам, связанным с мероприятием, Вы можете связаться с нами:<br><br>Анна +7 (999) 999-99-99</p>
+    </section>
+
+    <!-- Лист 8: Анкета гостя -->
+    <section id="sheet8" data-aos="fade-up">
+        <h2 class="font1">Анкета гостя</h2>
+        <p class="font2" style="font-weight:bold;">Просим подтвердить свое присутствие до: 12 / 08 / 26</p>
+        <form action="https://formspree.io/f/maqgdlad" method="POST" class="survey-form">
+            <label class="font2">Пожалуйста, подтвердите Ваше присутствие:
+                <input type="text" name="name" placeholder="Иван Иванов" required>
+            </label>
+            <fieldset>
+                <legend class="font2">Планируете ли Вы присутствовать?</legend>
+                <label class="radio-option">
+                    <input type="radio" name="attendance" value="Да, с удовольствием" required> Да, с удовольствием
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="attendance" value="Не смогу"> Не смогу
+                </label>
+            </fieldset>
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </section>
+
+    <!-- Лист 9: Финальная подпись -->
+    <section id="sheet9" data-aos="fade-up">
+        <h2 class="font1">С любовью Анна и Никита</h2>
+        <p class="font2">До скорой встречи!</p>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
