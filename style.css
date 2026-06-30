@@ -36,6 +36,25 @@ section {
     margin: 0 auto 1em;
 }
 
+/* Лист 2: текст слева, фото справа */
+#sheet2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#sheet2 .text-content {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+#sheet2 .image-placeholder {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
 /* Календарь */
 .calendar {
     display: inline-block;
@@ -79,7 +98,7 @@ section {
     background: #d4a373;
     color: white;
     font-weight: bold;
-    border-radius: 4px;  /* квадратная рамка */
+    border-radius: 4px;
 }
 
 /* Кнопки с обводкой */
@@ -126,6 +145,19 @@ section {
     border: 3px solid #e8d5c4;
 }
 
+.event-time {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #b08b6c;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.event .font2 {
+    margin-top: 5px;
+    max-width: 100%;
+}
+
 /* Счётчик */
 #timer {
     display: flex;
@@ -163,7 +195,7 @@ section {
 .survey-form input[type="text"] {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #d4a373;
+    border: 2px solid #b08b6c;      /* такой же цвет и толщина, как у кнопки */
     border-radius: 12px;
     font-family: inherit;
     font-size: 1rem;
@@ -198,6 +230,12 @@ legend {
 @media (max-width: 600px) {
     section {
         padding: 60px 15px;
+    }
+    #sheet2 {
+        flex-direction: column;
+    }
+    #sheet2 .text-content {
+        text-align: center;
     }
     .timeline {
         flex-direction: column;
