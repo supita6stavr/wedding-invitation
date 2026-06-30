@@ -34,31 +34,40 @@ section {
     font-size: clamp(1rem, 3vw, 1.3rem);
     max-width: 500px;
     margin: 0 auto 1em;
+    color: #4a4a4a;             /* явно задаём цвет для единообразия */
 }
 
-/* ----- ЛИСТ 2: Текст слева, фото справа ----- */
+/* ----- ЛИСТ 2: две равные половины ----- */
 #sheet2 {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 0;
 }
 
-#sheet2 .text-content {
-    flex: 1 1 300px;
-    text-align: left;
+.half {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-width: 0;               /* чтобы не переполняло */
 }
 
-/* убираем центрирование у текста в этой секции */
-#sheet2 .font2 {
-    margin: 0 0 1em 0;
+.half-text {
+    text-align: center;
+}
+
+.half-text .font2 {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
 }
 
-#sheet2 .image-placeholder {
-    flex: 1 1 300px;
+.half-image .image-placeholder {
     margin: 0;
 }
 
@@ -108,7 +117,7 @@ section {
     border-radius: 4px;
 }
 
-/* ----- Кнопки с обводкой (используются и для ссылок, и для submit) ----- */
+/* ----- Кнопки с обводкой ----- */
 .outline-btn {
     display: inline-block;
     margin-top: 20px;
@@ -152,10 +161,10 @@ section {
     border: 3px solid #e8d5c4;
 }
 
-/* время теперь тоже в классе font2, просто жирнее для акцента */
 .event-time {
-    font-weight: 600;
+    font-weight: 600;            /* можно оставить для небольшого акцента */
     margin-bottom: 5px !important;
+    color: #4a4a4a;             /* явное указание цвета */
 }
 
 .event .font2 {
@@ -197,12 +206,11 @@ section {
     margin-top: 10px;
 }
 
-/* поле ввода – точно как рамка кнопки */
 .survey-form input[type="text"] {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #b08b6c;
-    border-radius: 40px;           /* теперь как у кнопки */
+    border-radius: 40px;
     font-family: inherit;
     font-size: 1rem;
     background: #fffdf9;
@@ -245,17 +253,13 @@ legend {
         padding: 60px 15px;
     }
 
-    /* лист 2: на телефоне колонка, текст и фото центрируются */
+    /* лист 2: на телефоне колонка */
     #sheet2 {
         flex-direction: column;
-        justify-content: center;
     }
-    #sheet2 .text-content {
-        text-align: center;
-    }
-    #sheet2 .font2 {
-        margin-left: auto;
-        margin-right: auto;
+    .half {
+        flex: 1 1 auto;
+        width: 100%;
     }
 
     .timeline {
