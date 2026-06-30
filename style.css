@@ -22,7 +22,32 @@ section {
     align-items: center;
     padding: 40px 20px;
 }
+/* ----- Фон для Листа 1 ----- */
+#sheet1 {
+    background-image: url('цвет.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
 
+/* Полупрозрачная подложка для читаемости текста (опционально) */
+#sheet1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* можно изменить прозрачность */
+    z-index: 0;
+}
+
+/* Поднимаем текст над подложкой */
+#sheet1 * {
+    position: relative;
+    z-index: 1;
+}
 .font1 {
     font-family: 'Caveat', cursive;
     font-size: clamp(2.5rem, 8vw, 4rem);
