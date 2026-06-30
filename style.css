@@ -67,11 +67,21 @@ section {
     max-width: 100%;
 }
 
-/* Уменьшаем и центрируем изображение */
+/* Размер фото на Листе 2 */
 .half-image .image-placeholder img {
     display: block;
     margin: 0 auto;
-    max-width: 280px;        /* регулируйте размер здесь */
+    max-width: 280px;        /* меняйте это значение */
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* ----- ЛИСТ 4: размер фото ----- */
+#sheet4 .image-placeholder img {
+    display: block;
+    margin: 20px auto;
+    max-width: 350px;        /* меняйте это значение */
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -253,6 +263,17 @@ legend {
     justify-content: center;
 }
 
+/* ----- Мобильный перенос строки (Лист 2) ----- */
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .mobile-break {
+        display: inline;
+    }
+}
+
 /* ----- Адаптивность ----- */
 @media (max-width: 600px) {
     section {
@@ -271,15 +292,4 @@ legend {
         flex-direction: column;
         align-items: center;
     }
-    /* Скрываем мобильный перенос на десктопе */
-.mobile-break {
-    display: none;
-}
-
-/* Показываем только на мобильных (ширина до 600px) */
-@media (max-width: 600px) {
-    .mobile-break {
-        display: inline;
-    }
-}
 }
