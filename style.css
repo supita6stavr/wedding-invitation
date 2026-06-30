@@ -71,7 +71,7 @@ section {
 .half-image .image-placeholder img {
     display: block;
     margin: 0 auto;
-    width: 500px;          /* ← меняйте только это число (280px, 350px, 400px...) */
+    width: 1000px;          /* ← меняйте только это число (280px, 350px, 400px...) */
     max-width: 100%;       /* не трогайте – это для мобильных */
     height: auto;
     border-radius: 20px;
