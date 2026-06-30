@@ -34,7 +34,7 @@ section {
     font-size: clamp(1rem, 3vw, 1.3rem);
     max-width: 500px;
     margin: 0 auto 1em;
-    color: #4a4a4a;             /* явно задаём цвет для единообразия */
+    color: #4a4a4a;
 }
 
 /* ----- ЛИСТ 2: две равные половины ----- */
@@ -54,7 +54,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    min-width: 0;               /* чтобы не переполняло */
+    min-width: 0;
 }
 
 .half-text {
@@ -67,8 +67,14 @@ section {
     max-width: 100%;
 }
 
-.half-image .image-placeholder {
-    margin: 0;
+/* Уменьшаем и центрируем изображение */
+.half-image .image-placeholder img {
+    display: block;
+    margin: 0 auto;
+    max-width: 280px;        /* регулируйте размер здесь */
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 /* ----- Календарь ----- */
@@ -162,9 +168,9 @@ section {
 }
 
 .event-time {
-    font-weight: 600;            /* можно оставить для небольшого акцента */
+    font-weight: 600;
     margin-bottom: 5px !important;
-    color: #4a4a4a;             /* явное указание цвета */
+    color: #4a4a4a;
 }
 
 .event .font2 {
@@ -253,7 +259,6 @@ legend {
         padding: 60px 15px;
     }
 
-    /* лист 2: на телефоне колонка */
     #sheet2 {
         flex-direction: column;
     }
