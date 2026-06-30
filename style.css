@@ -24,13 +24,12 @@ section {
 }
 /* ----- Фон для Листа 1 ----- */
 #sheet1 {
-    background-image: url('центр.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    background-image: url('центр.jpg');
+    background-size: contain;      /* картинка впишется полностью, без обрезки */
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
-
 /* Полупрозрачная подложка для читаемости текста (опционально) */
 #sheet1::before {
     content: '';
