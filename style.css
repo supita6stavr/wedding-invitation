@@ -24,7 +24,7 @@ section {
 }
 /* ----- Фон для Листа 1 ----- */
 #sheet1 {
-    background-image: url('цвет.jpg');
+    background-image: url('центр.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
